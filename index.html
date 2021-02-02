@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Hyundai Cars</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600" rel="stylesheet">
+</head>
+<body>
+<header>
+      <nav>
+            <a href="index.html">
+          <img src="hyundai.jpg" alt="">
+      </a>
+
+            <ul class="menu">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="#">Products</a>
+                        <ul>
+                              <li><a href="altroz.html">Altroz</a></li>
+                              <li><a href="#">Product 2</a></li>
+                              <li><a href="#">Product 3</a></li>
+                              <li><a href="#">Product 4</a></li>
+                        </ul>
+                  </li>
+                  <li><a href="#">Used Cars</a>
+                        <ul>
+                              <li><a href="#">Product 1</a></li>
+                              <li><a href="#">Product 2</a></li>
+                              <li><a href="#">Product 3</a></li>
+                              <li><a href="#">Product 4</a></li>
+                        </ul>
+                  </li>
+                  <li><a href="insurance.php">Apply Insurance</a></li>
+                  <li><a href="contact.php">Contact Us</a></li>
+            </ul>
+      </nav>
+</header>
+
+    <div class="image">
+        <img src="i20.jpg" alt="i20">
+    </div>
+
+
+<div class="section">
+  <div class="heading">
+      <h1>Select The Model</h1>
+  </div>
+  <div class="content">
+      <img src="verna.jpg" alt="verna">
+      <h3>Hyundai Verna</h3>
+  </div>
+  <div class="content">
+    <img src="i201.jpg" alt="i20">
+    <h3>Hyundai New I20</h3>
+</div>
+</div>
+
+
+<div class="section2">
+    <div class="heading2">
+        <h1>Sports Utility Model</h1>
+    </div>
+    <div class="content2">
+        <img src="venue.jpg" alt="venue">
+        <h3>Hyundai Venue</h3>
+    </div>
+    <div class="content2">
+      <img src="tuscon.jpg" alt="tuscon">
+      <h3>Hyundai Tuscon</h3>
+  </div>
+  </div>
+
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="smart.jpg" style="width:100%">
+      
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="loan.jpg" style="width:100%">
+      
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="member.jpg" style="width:100%">
+      
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+
+
+    <div class="last">
+        <img src="hyundai.jpg" alt="hyndai">
+        <h3>Hyundai Head Office</h3>
+        <h6>C-48, 2nd Avenue Annanagar, Chennai - 600102.</h6>
+    </div>
+
+    <footer class="footer">
+        <h3>Locations  | T Nagar  | Pallikaranai  | Sholinganallur  | Kattupakkam  | Purasawalkam  | Avadi  | Sitemap</h3>
+        <h4>Copyright 2021 © Hyundai | All Rights Reserved</h4>
+    </footer>
+    
+    <script>
+    var slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+    </script>
+    
+
+
+      <script type="text/javascript">
+
+      $("nav div").click(function() {
+            $("ul").slideToggle();
+            $("ul ul").css("display", "none");
+      });
+
+      $("ul li").click(function() {
+            $("ul ul").slideUp();
+            $(this).find('ul').slideToggle();
+      });
+
+      $(window).resize(function() {
+            if($(window).width() > 768) {
+                  $("ul").removeAttr('style');
+            }
+      });
+      </script>
+
+
+    
+
+</body>
+</html>
